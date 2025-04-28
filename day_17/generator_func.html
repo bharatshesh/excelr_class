@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Function</title>
+</head>
+<body>
+    <script>
+        function* idGenerator(){
+            let id=1;
+            while(true){
+                yield `excler_00$(id++)`
+            }
+            
+        }
+        let idGen = idGenerator();//create an instance of the generator   
+         console.log(idGen.next().value); // data and  the value
+         console.log(idGen.next().value);
+         console.log(idGen.next().value);
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Variable</h1>
+    <hr>
+    <p>it is used to store data/value and its acts like a containet</p>
+    <p>Based on  declaratipon</p>
+    <ol>
+        <li>var 
+            <ul>
+                <li>var is uesd to declare the variable </li>
+                <li>var is used to redeclare the variable </li>
+            </ul>
+        </var></li>
+        <li>var is ussed to declare the variable </li>
+        <li>let</li>
+        <li>const</li>
+     </ol>
+     <script>
+
+        var value1=10;//declare and assigning
+        console.log(value1);
+        var value1=20;//redeclaration
+        console.log(value1);
+        value1=30;//reintialization
+        console.log(value1);
+        
+        var value2;
+        console.log(value2);//uneffund
+
+     //====================================================//
+     console.log("================Let=============================");
+    
+
+
+        let value3=10;//declare and assigning
+        console.log(value3);
+        
+        value1=30;//reintialization
+        console.log(value1);
+        
+        var value4;
+        console.log(value4);//uneffund
+        //=======================================//
+        console.log("==============Const========================");
+
+
+        const value5=10;//declare and assigning
+        console.log(value5);
+        //const  value5=20;//redeclaration
+        console.log(value5);
+        //value5=30;//reintialization
+        console.log(value5);
+        
+        //var value5;
+        //console.log(value5);//uneffund
+//-----------------------------------------------------------
+       
+       function example(){
+         var a=10;
+         let b=20;
+         const c=30;
+         console.log(a,b,c,"inside function before if");
+            if(true){
+            var a=40;
+            let b=50;
+            const c=60;
+            console.log(a,b,c,"inside block");
+          }
+          console.log(a,b,c,"inside function after if");
+       }
+
+       example();
+
+       function example2(){
+        var data1="hello";
+        console.log(data1);
+         if(true){
+            var data1="hii";
+            console.log(data1);
+
+         }
+         console.log(data1);
+       }
+
+       example2();
+
+        
+
+
+    </script>
+</body>
+</html>

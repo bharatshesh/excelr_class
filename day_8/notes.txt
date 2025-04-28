@@ -1,0 +1,12 @@
+ <p>it is used to align element</p>
+        <p> it is used to distribute space between element</p>
+        <p>it will </p>
+        <p>flexcontainer is main division of flex</p>
+        <p>flex item are child of flex container</p>
+         <p>flex container is used to wtrap the flex item</p>
+         <p>disply: flex is used to make flex container</p>
+         <p>the defult direction is row</p>
+         <p>"flex-direction :row-reverse; row; column; column-reverse" is uesd to change the diredtion</p>
+
+         row(left to right) x axis ( main axis) y axis(cross aixs)
+         column(top to bottom) y aixs (main axis) x aixs(cross aixs)

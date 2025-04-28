@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 100px;
+            background-color: red;
+            overflow:scroll;
+            
+        }
+        .one{
+            overflow:visible;
+
+        }
+        .two{
+            overflow:hidden ;
+        }
+        .three{
+            overflow: scroll;
+        }
+        .four{
+            overflow: auto;
+        }
+       
+    </style>
+</head>
+<body>
+
+    <h1>Overflow</h1>
+    <p>it is used to hide/scroll the overflow content</p>
+    <p>it will work for block level elements and we need to mention a perticular height </p>
+    <p>it a property of class</p>
+    <pre>
+        overflow: visible/hidden/scroll/auto;
+        overflow-x:(left/right)
+        overflow-y:(top/bottom)
+    </pre>
+    <p>This is visible/default</p>
+    <div class="box one">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Itaque magnam nesciunt magni libero quasi quos perspiciatis 
+        consequuntur alias earum explicabo, corrupti doloremque?
+         Quidem enim sit recusandae earum nihil expedita omnis.
+    </div>
+
+    <br><br><br><br><hr>
+    <p>This is hidden</p>
+    <div class="box two">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Itaque magnam nesciunt magni libero quasi quos perspiciatis 
+        consequuntur alias earum explicabo, corrupti doloremque?
+         Quidem enim sit recusandae earum nihil expedita omnis.
+    </div>
+    <br><br><br><br><br>
+    <p>This is scroll</p>
+    <div class="box three">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Itaque magnam nesciunt magni libero quasi quos perspiciatis 
+        consequuntur alias earum explicabo, corrupti doloremque?
+         Quidem enim sit recusandae earum nihil expedita omnis.
+    </div>
+    <br><br><br><br><br>
+    <div class="box four">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+         A modi laboriosam, obcaecati dolorem perspiciatis totam dolores. 
+         Perspiciatis dicta at eveniet numquam distinctio, consequuntur 
+         similique ducimus ullam fugit placeat, praesentium asperiores iste 
+         quod facere voluptate est.
+        </div>
+        <br><br>
+
+    
+</body>
+</html>

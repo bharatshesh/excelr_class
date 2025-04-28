@@ -1,0 +1,80 @@
+Tokens:
+    1.identifiers
+    2.keywords
+    3.literals/values
+    4.data types
+    5.operators
+    6.Variables
+
+      Identifiers:
+          1.Variables names
+          2.function names
+          3.class names
+
+          Variables names:
+            1.connot start with number
+            2.cannot start with special characters
+            3.cannot be reserved keywords
+            5.should be meaningfull
+            6.should be short
+
+            Ex:
+               a=10; correct
+               1a=10; worng
+               _a=10; correct
+               $a=10; correct
+
+        ======================================================
+
+        keywords:
+         reserved words-if else for while etc
+
+         =====================================================
+
+        literals/value/data:
+            1.Number
+              10 , -10 , 10.0
+            2.String
+               -group of characters
+               -denoted with double quotes(""), single quotes(''),
+               templete literals/back ticks (``);
+           3.Boolean
+            4.Null
+            5.Undefined
+            6.Symbol
+
+        =======================================================
+
+
+        Data types;
+           1.primitive data types
+               1.number -- 10 , -10, 10.0
+               2.String -- "" , '', ``
+               3.Boolean -- true or false
+               4.Null    -- no value-object type
+               5.Undefined -- declare variable without value
+               6.Symbol   --- Symbol("id")
+               7.bigint   --- 23444444444444444444444444444444n
+          2.non primitive data types - mutable/ stores data in refrence
+               1.array
+               2.object
+               3.Map
+               4.set
+               5.Data
+               6.Regexp
+
+
+   Variables:
+      1.variable declaration:
+         var a, //Undefined
+         let b, //Undefined
+         const c, //error
+      2.variable inilization:(assigning a value to variable)
+         var a=10; let=20;  let c=30;
+      3.variable reinitalization:
+         var a=20;  let b=30;
+             a=30;      b=40;
+      4.variable redeclaration:
+         var a=10;
+         var a=30;        
+ Data types:

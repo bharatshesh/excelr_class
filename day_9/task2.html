@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Task2</title>
+    <style>
+        .mainContainer{
+            min-height: 100vh;
+            display: grid;
+            grid-template-areas: "   header   header     "
+                                 "   content  section1   "
+                                 "   content  section2   "
+                                 "   footer    footer    ";
+
+        }
+        .item{
+            font-size:40px ;
+            text-align: center;
+            align-content: center;
+            margin: 5px;
+            border-radius: 20px;
+        }
+
+        .header{
+            background-color: rgb(229, 142, 142);
+            grid-area: header;
+
+
+        }
+        .content{
+            background-color: rgb(115, 115, 221);
+            grid-area: content;
+        }
+        .section1{
+            background-color: rgb(156, 240, 156);
+            grid-area: section1;
+
+        }
+        .section2{
+            background-color: rgb(76, 233, 233);
+            grid-area: section2
+            ;
+        }
+        .footer{
+            background-color: rgb(47, 255, 255);
+            grid-area: footer;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="mainContiner">
+        <div class="item header">Header</div>
+        <div class="item content">Content</div>
+        <div class="item section1">Section1</div>
+        <div class="item section2">Section2</div>
+        <div class="item footer">Footer</div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>Form2</title>
+      <style>
+        form{
+            border: 2px solid Black;
+            width:400px;
+            margin: 30px auto;
+            text-align: center;
+            
+        }
+        button{
+            color: solid black;
+            background-color:rgb(234, 119, 83);
+            text-align: center;
+            border-color: black;
+        }
+        
+       fieldset{
+            width:80%;
+            margin: 25px;
+            background-color: bisque;
+            color: rgb(20, 18, 19);
+
+       }
+       legend{
+         color: rgb(237, 125, 100);
+       }
+       h1{
+        color: coral;
+        text-align: center;
+        
+       }
+       form{
+        background-color: aliceblue;
+       }
+       
+       
+        
+      </style>
+   </head>
+   <body>
+    <h1>HTML FORM</h1>
+    <form action="" method="get">
+        <fieldset>
+            <legend><h3>Basic Information</h3></legend>
+            <label for="fname"> First Name</label>
+            <input type="text" id="fname" name="fname">
+            <br><br>
+            <label for="lname"> Last Name</label>
+            <input type="text" id="lname" name="lname">
+            <br><br>
+            <label for="age">Age</label>
+            <input type="number" name="age" id="age" min="10" max="100">
+            <br><br>
+            <label for="gender">Gender</label>
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+            <input type="radio" name="gender" id="other" value="other" checked>
+            <label for="other">Other</label>
+            <br><br>
+            <label for="dob">Date of birth</label>
+            <input type="date" name="dob" id="dob">
+            <br><br>
+            <label for="image">Uplode Image</label>
+            <input type="file" name="image" id="image" accept="image/*">
+            <br><br>
+            <!--<label for="phone">Phone</label>
+            <input type="text" name="" id="" value="4345353535" readonly>
+
+            <label for="phone">Phone</label>
+            <input type="text" name="" id="" value="4345353535" hidden>-->
+
+        </fieldset>
+        <fieldset>
+        <legend><h3>Favorite</h3></legend>
+        <label for="color">Favorite Color</label>
+        <input type="checkbox" name="red" id="red">
+        <label for="color">Red</label>
+        <input type="checkbox" name="green" id="green">
+        <label for="color">Green</label>
+        <input type="checkbox" name="yellow" id="yellow">
+        <label for="yellow">Yellow</label>
+        
+        <br><br>
+        <label for="item">Favorite FoodItem</label>
+        <select name="item" id="item">
+            <option value="">Select food</option>
+            <optgroup label="Tiffins">
+                <option value="idly">Idly</option>
+                <option value="dosa">Dosa</option>
+            </optgroup>
+            <optgroup label="non-veg">
+                <option value="biriyani">Biriyani</option>
+                <option value="freidrice">Fried Rice</option>
+            </optgroup>
+        </select>
+        <br><br>
+         <label for="subject"> Favorite Subject</label>
+         <select name="subject" id="subject" multiple size="2">
+            <option value="maths">Maths</option>
+            <option value="science">Sciecce</option>
+            <option value="history">History</option>
+            <option value="english">English</option>
+         </select>
+         <br><br>
+         <label for="game">Favorite Game</label>
+         <input name="game" id="game" list="games">
+            <datalist id="games">
+            <option value="Criket"></option>
+            <option value="Football"></option>
+            <option value="Hockey"></option>
+            </datalist>
+        </fieldset>
+
+
+         <fieldset>
+            <legend><h3>Contact Information</h3></legend>
+            <label for="emal">Email</label>
+            <input type="email" id="email"name="name"></label>
+            <br><br>
+
+            <label for="phone">Phone</label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter your 10 digit number" pattern="[0-9]{10}">
+            <br><br>
+
+            <label for="pass">Password</label>
+            <input type="password" name="pwd" id="pwd" required>
+            <br><br>
+
+            <label for="">Address</label>
+            <textarea name="address" id="address"></textarea>
+
+
+         </fieldset>
+         <br>
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+
+
+    </form>
+        
+      
+    </body>
+    </html>

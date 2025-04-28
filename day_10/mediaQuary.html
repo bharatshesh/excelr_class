@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Quary 1</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+        body{
+            border: 1px solid red;
+            height: 100vh;
+        }
+        .nav{
+            background-color: rgb(85, 119, 244);
+            height: 10%;
+            display: flex;
+            justify-content:flex-end ;
+            align-items: center;
+        }
+        .navItem{
+            font-size: 2em;
+            color: white;
+            margin: 20px;
+        }
+        @media screen and (max-width:1100px) and (min-width:700px) {
+            .nav{
+                background-color: rgb(199, 70, 23);
+                justify-content: space-between;
+            }
+            .Footer{
+                background-color: beige;
+            }
+            
+        }
+        @media screen and (max-width:700px) and (min-width:300px) {
+            .nav{
+                background-color: rgb(28, 179, 43);
+                justify-content: flex-start;
+            }
+            .Footer{
+                background-color: rgb(111, 177, 234);
+            }
+
+
+        }
+        @media screen and  (orientation:landscape){
+            .center{
+                background-color: rgb(209, 43, 43);
+            }
+            
+        }
+        @media screen  and (orientation:portrait) {
+            .center{
+                background-color:green;
+            }
+            
+        }
+        .center{
+            text-align: center;
+            background-color: solid black;
+            color: white;
+            height: 400px;
+
+        }
+
+    </style>
+</head>
+<body>
+    <h3> Media Quaries</h3>
+    <p>it is used to create responsive pages.</p>
+    <hr>
+    <div class="nav">
+        
+            <div class="navItem">Home</div>
+            <div class="navItem">About</div>
+            <div class="navItem">Content</div>
+            
+        
+    </div>
+    <div>
+        <h1 class="center">This is center</h1>
+    </div>
+    
+
+    <div>
+        <h2>Footer</h2>
+
+    </div>
+</body>
+</html>

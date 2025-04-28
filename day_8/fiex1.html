@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+ <html lang="en">
+   <head>
+     <meta charset="UTF-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <title>flex1</title>
+     <style>
+        /*flex coutainer*/
+        .parent{
+            height: 700px;
+            border: 1px soild red;
+            display: flex;
+            flex-direction: column;
+           /* justify-content: flex-end; /* main axis*/
+            /*align-items: center;/* cross axis*/
+            align-items: flex-end;
+            justify-content: center;
+            gap: 20px;
+           
+        }
+        /*flex item*/
+        .child{
+            height: 100px;
+            width: 100px;
+            font-size: 40px;
+        }
+        .one{
+            background-color: aqua;
+        }
+        .two{
+            background-color: red;
+        }
+        .three{
+            background-color: green;
+        }
+        .four{
+            background-color: blue;
+        }
+     </style>
+     
+     </head>
+     <body>
+        
+
+        <hr>
+         <div class="parent"> 
+            <div class="child one">1</div> 
+            <div class="child two">2</div>
+            <div class="child three">3</div>
+            <div class="child four">4</div> 
+
+         </div>
+     </body>
+     </html>

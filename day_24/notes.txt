@@ -1,0 +1,70 @@
+Css Manipulation:
+             - modifying Css by DOM methods
+        1.style -- adding Css
+        2.getComputedStyle() -- accessing Css
+        3.classList.add() -- adding class
+        4.classList.remove() -- removing class
+        5.classList.toggle() -- toggling class(add or romove/on or off)
+        6.classList.contains() -- checking class presence 
+
+Function:
+       -block of code that perform a specific task
+       -it is a re-uasble block of code 
+       -it is a collection of statements that performs a rask 
+       -we can call Function multiple times for executing 
+
+event:
+    -event is an action that coures in the browser
+    -event is a signal/notification that somthing has happends 
+    -used to haddle user interactions
+
+useCases:
+       1.click event
+       2.mouse event
+       3.key event
+       4.scroll event
+       5.form  events etc 
+
+Event Handling:
+        -Handling events by DOM method 
+        -used to handle user interact
+        -it is a code(Function) that executing when an event acorce
+    1.addEventListener()
+    2.removeEventListener()
+    3.dispatchEvent()
+
+
+Event bubbling
+        -event propagation in the DOM 
+        -event is peopagated from child to parent 
+
+        DOM
+        |
+        Root Element
+        |
+        head body
+         |
+           div outside
+           |
+           div inside
+           |
+           button
+
+ ex: button-->div(inside)-->div(outside)-->body-->html-->document   
+ -----------------------------------------------------------------------------------
+
+Event bubbling
+    button-->div(inside)-->div(outside)
+
+Event capturing:
+     div(outside)-->div(inside)-->button
+     -event is propagated from parent to child
+     -default propagation is from child to parent
+     -to achieve event capturing , we can use addEventListener()
+      method with third argument as true  
+--------------------------------------------------------------------------------------
+        
+
+
+
+

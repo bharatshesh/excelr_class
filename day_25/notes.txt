@@ -1,0 +1,49 @@
+closurs:
+ - it is function that has accses to the parent scope
+ - it can accses the variable and function of the parent scope
+ -it is a specail kind of function, it allows a function to remember 
+ and accses the variable and function of its parent scope
+
+use case:
+     -it is use to create private variable and function
+     -Data Hiding 
+
+-----------------------------------------------------------------------------------------
+this:
+    -it is keyword taht referse to the current object
+    -it is used to acces the propertiies and methods
+      of the current object
+
+
+
+extensions 
+
+git hub codespace
+git hub pull request
+git repositories
+
+---------------------------------------------------------------------------------
+call();
+------
+ -it is a method that is use to call a function
+ -when you need to invoke a function immediately with a specific value(this)
+ -pas arguments to a function as a value 
+
+---------------------------------------------------------------------------------
+apply():
+-------
+    -it is a method that is use to call a function
+    -when you need to invoke a function immediately with 
+     a specific value(this)
+    - pass arguments to a function as an array
+---------------------------------------------------------------------------------
+bind:
+-----
+   -it is a method that is use to call la function
+   -use when we want to create new function with a specific value
+   but  not execute immediately 
+
+
+
+
+

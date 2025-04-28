@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            border: 2px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="post">
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username">
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        <br><br>
+        <p id="error"></p>
+        <input type="submit" value="login">
+
+    </form>
+    <script>
+       let obj={
+        username:"admin",
+        password:"1234"
+       }
+       document.addEventListener('submit',(event)=>{
+        event.preventDefault();
+        let username=document.getElementById('username').value;
+        let password=document.getElementById('password').value;
+        console.log(username,password);
+        if(username==obj.username && password==obj.password){
+            console.log('login success');
+            window.location.href="home.html";
+        }else{
+            console.log('login failed');
+            let error=document.getElementById('error');
+            error.innerHTML="login failed! please try again.";
+            error.style.color="red";
+            
+        }    
+            
+    })
+        
+       
+       
+    </script>
+</body>
+</html>

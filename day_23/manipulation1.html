@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="div1">
+        <p id="removedp"> this is a removed text</p>
+        <p id="replacep"> this is replacep text </p>
+        <p id="insertedp"> this is adjacent text</p>
+        <p id="clone">  it is cloned text</p>
+        
+    </div>
+    <script>
+        let div=document.getElementById('div1');
+        let p=document.createElement('p');
+        p.innerHTML='this is a para';
+        p.style.color='red';
+        div.appendChild(p);
+
+
+        let arr=[10,20,30,41,50];
+        let ul= document.createElement('ul');
+        for(let e of arr){
+            let li=document.createElement('li');
+            if (e%2==0){
+                li.style.color='green';
+            }
+            else{
+                li.style.color='red';
+            }    
+            
+        
+            ul.appendChild(li);
+
+        }
+        div.appendChild(ul);
+
+        let removedp=document.getElementById("removedp")
+        div.removeChild(removedp);
+
+        let replacep=document.getElementById('replacep');
+        let newp=document.createElement('p');
+        newp.innerHTML='this is a new parapraph';
+        div.replaceChild(newp,replacep);
+
+        //let insertedp=document.createElement('p');
+        //insertedp.innerHTML='this is a inserted paragrapg';
+        //div.insertBefore(newp,insertedp);
+
+        let adjacentp=document.createElement('i');
+        adjacentp.innerHTML='this is an adjacent parapraph';
+        div.insertBefore(adjacentp,document.getElementById('insertedp'));
+
+        let clonep=document.getElementById('clone');
+        let clonedp=clonep.cloneNode(true);
+        div.insertBefore(clonedp,clonep);
+
+
+        
+
+    </script>
+</body>
+</html>

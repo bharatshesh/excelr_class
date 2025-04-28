@@ -1,0 +1,46 @@
+what are callback function:
+   --it is a function that is passed an sn argument to another function
+-------------------------------------------------------------------------------------
+callback hell(pyramid of doom)
+
+ -it is a situation where we have multiple callback inside a callback(nested callback)
+ -hard to read
+ -hard to maintain/modify
+ -this usually happens when we have to perform multiple asynchronous oprations
+
+-------------------------------------------------------------------------------------
+what are promises:
+ -a promises in JS is an object that represent the outcome of an asynchronous oprations
+ - it is used to handle the success and failure of an asynchronous oprations
+ -states in promises
+      1.pending-inital states2
+      2.fulfilled-the oprations was successful
+      3.rejeced-the oprations failed
+ -we can use then() function to handle the success and failure of a promises
+ -we can use catch() function to handle the failure of a Promises
+ -we can use finally() function to handle the success and failure of promise     
+
+
+async:
+  -async function are functionn that return a promise
+  async function are used to handle asynchronous oprations
+
+  Syntax:
+       async function functionName(){
+
+       }
+
+     awit:
+
+      awit keywords is used to wait for a promise to resole
+      awit is used inside an async function
+      it will make the code asynchronous
+
+      Syntax:
+
+       async function functionName(){
+        awit functionName();
+       }  
+
+ & awit keywords
+Promises.all

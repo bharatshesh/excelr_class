@@ -1,0 +1,104 @@
+
+types:
+      
+      
+
+
+
+
+1.Function declartion/named function/general function
+-----------------------------------------------------
+Syntax:
+  function functionName/Identifier(){
+    //set of sentences that perform a task 
+  }
+
+//passing arguments
+function funct_Name(agg1, arg2........);{
+    return result;
+}
+ 
+ //return statements
+ function funct_Name(arg1, arg2.........){
+    return result;
+ }
+ let result=funct_Name(arg1, arg2........);
+
+ ===========================================================
+
+ 2.function expression
+ ----------------------------------------------------------
+ Syntax:
+       let result = function(arg1, arg2......){
+            return result;
+        }
+        result(arg1, arg2.....);
+ ===========================================================
+
+ 3.arrow function:
+ ------------------------------------------------------------ 
+       shorter Syntax than regular function
+
+ Syntax:
+        let data = ( )=>{
+
+        }      
+        ex:(arg1,arg2)=>{
+            //specific task
+        }
+==============================================================
+4.constructor function
+  it is a function that is uesd to cresrte a object
+
+  Syntax:
+       function person(name,age){
+        this.name=name;
+        this.age=age;
+
+       }
+       new person('tejas',20):
+====================================================================
+5.Call back function:
+  -it is a function that is passed as an argument 
+  -it is a function that is called by another function
+
+  Syntax:
+
+  Function functionName(arg1, arg2, fun_2,fun_3){
+    //set of sentences taht perform a task
+  }   
+  functionName(arg1, arg2, fun_2, fun_3);
+===============================================================
+  6.Genreator function :
+     it is a function that is uesd to create iterators/Genreatorss
+
+     Syntax:
+         function* functionName(){
+            yield 1;
+            .
+            .
+            .
+            yield n;
+         }           
+=====================================t=============================
+7IIFE:
+ - imediately invoked function expression.
+ -it is a function that is called imediately it us defined.
+
+ Syntax:
+ (
+    function(){
+        //set of sentences that perform a task
+
+    }        
+ )();  
+ ====================================================================
+ 8.higher order function:
+    it is function taht is passed as an argument to another function
+    takes a function as an argument add return a function
+
+    Syntax:
+     function functionName(arg1, arg2, fun_2){
+        //set of sentences that perform a task 
+        return fun_2(arg1,arg2);
+     } 
