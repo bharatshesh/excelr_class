@@ -1,6 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.bundle.min'
 import App from './App.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
@@ -14,6 +16,12 @@ import Parent4 from './props/Parent4.jsx'
 import GrandParent from './props/PropsDrilling.jsx'
 import Login from './context/Application.jsx'
 import Container from './components/Presentational_Cotainer.jsx'
+import EventTask2 from './Events/EventTask2.jsx'
+import EventTask1 from './Events/EventTask1.jsx'
+import InlineStyle from './Events/Styles/lnlineStyle.jsx'
+import ExternalStyle from './Events/Styles/ExternalStyle.jsx'
+import BootStrapTask1 from './Events/Styles/BootStrapTask1.jsx'
+import BootstrapTask2 from './Events/Styles/BootStrapTask2.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -26,6 +34,6 @@ createRoot(document.getElementById('root')).render(
    {/* <Parent2/> */}
    {/* <Parent3/> */}
    {/* <Parent4/> */}
-   <Container/>
-  </StrictMode>,
+   <EventTask2/>
+  </StrictMode>
 )
