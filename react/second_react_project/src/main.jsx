@@ -22,6 +22,8 @@ import InlineStyle from './Events/Styles/lnlineStyle.jsx'
 import ExternalStyle from './Events/Styles/ExternalStyle.jsx'
 import BootStrapTask1 from './Events/Styles/BootStrapTask1.jsx'
 import BootstrapTask2 from './Events/Styles/BootStrapTask2.jsx'
+import Controlled from './components/Controlled.jsx'
+import UnControlled from './components/UnControlled.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -34,6 +36,18 @@ createRoot(document.getElementById('root')).render(
    {/* <Parent2/> */}
    {/* <Parent3/> */}
    {/* <Parent4/> */}
-   <EventTask2/>
+   {/* <GrandParent/> */}
+   {/* <GrandParentContext/> */}
+   {/* <Login/> */}
+   {/* <EventTask1/> */}
+   {/* <Container/> */}
+   {/* <InlineStyle/> */}
+   {/* <ExternalStyle/> */}
+   {/* <BootStrapTask1/> */}
+   {/* <BootstrapTask2/> */}
+   {/* <EventTask2/> */}
+   {/* <Controlled/> */}
+   {/* <UnControlled/> */}
+   <UnControlled/>
   </StrictMode>
 )
