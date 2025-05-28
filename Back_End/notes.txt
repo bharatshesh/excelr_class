@@ -349,5 +349,138 @@ reason                   it will check the condition,     it will execute the co
            ------------------------------------------------------------------------------       
 
               3.for loop
+
+              syntax:
+               for (initialization;condition;updation){
+                  // code will execute
+               }
+
+         Note:initialization,condition and update are optional
+
+               //initialization
+               for(;;){
+                     //condition
+                     //updation
+               }
+
+
+
               4.for-each loop(advanced for loop)
+              syntax:
+               for(datatype variableName:arrayName){
+                     //code will ececute
+
+               }
+---------------------------------------------------------------------------------
+                for                                       foreach
+----------------------------------------------------------------------------------
+ initialization,condition,updation                       is not required 
+   is required                                               
+   performed only slow                               
+
+              5.nested loop:loop insude another loop
+
+  3.Other Statements:
+  ------------------
+                  1.input statements:
+                     Scanner cs=new  Scanner(System.in);
+                     byte a=sc.nextByte();
+                     short b=sc.nextShort();
+                     int c=sc.nextInt();
+                     long c=sc.nextLong();
+                     float c=sc.next.Float();
+                     double c=sc.nest.Double();
+                     char g=sc.next().charAt(0);
+                     String s=sc.next();
+                     boolean n=sc.nextBoolean();
+                  
+                  2:output statements:
+                     System.out.println();- it will print the value 
+                                            and move the cursor to the next line
+                                            -emty value is also accepted
+
+                     System.out.print();-  it will print the value and
+                                           not move the cursor to the next line
+                                           -emty value will not accepted
+                      ex: System.out.println();//CTS 
+                          System.out.print();//CTE 
+
+                 3.break statements:
+                      it is used to terminate the flow
+                      ex: break;
+
+                 4.continue statements:
+                      it is used to skip the current iteration and continue the flow
+                      ex: continue;                           
+--------------------------------------------------------------------------------------------
+
+Arrays : 
+        -arrays are used to store multiple values in a single variable
+        ex: int []arr={1,2,3,4};
+        -arrays will store same data type values
+        ex: int []arr={1,2,3,4};
+            String []arr={"a","b","c","d"};
+        -arrays are fixed in size;
+        -non primitive data types.
+    1.Creation of Arrays:
+        -declaring an array
+        -initializing an array
+      ex: int []arr={1,2,3,4}; //declaring and initializing an array
+          int []arr=new int[5]; //declaring and providing a size
+          int []arr=new int[]{1,2,3,4}; //declaring and initializing an array
+          int []arr=new int[5]{1,2,3,4,5}; //declaring and providing a size
+
+    2.Accessing Arrays:
+        -accessing through index position
+        -accessing through for loop or for each loop
+
+Arrays class Methods:
+   -Arrays is a class present in java.util package
+   -it consist n number of static methods.
+
+   1.Arrays.toString(): used to print the values of an array
+       syntax:
+       System.out.println(Arrays.toString(arr));
+
+   2.Arrays.sort(): used to sort the values of an array
+      syntax:
+      Arrays.sort(arr); //ascending order
+      Arrays.sort(arr,Collections.reverseOrder());//descending order
+
+   3.Arrays.equals(): used to compare two arrays and returns true if 
+                     they are equal or  returns false
+      syntax:
+      boolean b=Arrays.equals(arr1,arr2);
+    
+    4.Arrays.mismatch(): used to compare two arrays and if it is same
+                         it returns the index of first element or else
+                         it returns -1
+      syntax:
+      int index=Arrays.mismatch(arr1,arr2); 
+    5.Arrays.binarySearch(): used to search an element in an array,
+                            if element is present it returns the index
+                            of that element or else it returns negative number
+        Note: it is applicable only for sorted arrays 
+      syntax:
+      int index=Arrays.binarySearch(arr,element);
+     6.Arrays.copyOfRange(): used to create a copy of an array based on copyOfRange
+        syntax:
+        int []arr1=Arrays.copyOf(arr,startingIndex,endingIndex-excluding);    
+                    
+
+Multidimensional Arrays:
+           -array of arrays
+           -declaring and initializing a multidimensional array
+        
+        int [][]arr={{1,2,3},{4,5,6},{7,8,9}}; // 2D array
+        int [][]arr=new int[3][3]; //declaring and providing a size
+
+        int [][]arr={{1,2,3},{4,5},{5,6,7,8}}// jagged arrays
+         // different rows have different number of columns
+
+  Arrays.deepToString(): used to print the values of a multidimensional array   
+
+                               
+
+
                
