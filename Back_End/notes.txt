@@ -468,7 +468,7 @@ Arrays class Methods:
         int []arr1=Arrays.copyOf(arr,startingIndex,endingIndex-excluding);    
                     
 
-Multidimensional Arrays:
+ Multidimensional Arrays:
            -array of arrays
            -declaring and initializing a multidimensional array
         
@@ -478,7 +478,131 @@ Multidimensional Arrays:
         int [][]arr={{1,2,3},{4,5},{5,6,7,8}}// jagged arrays
          // different rows have different number of columns
 
-  Arrays.deepToString(): used to print the values of a multidimensional array   
+  Arrays.deepToString(): used to print the values of a multidimensional array
+----------------------------------------------------------------------------------
+
+String :
+        -String is a class present in java.lang package
+        -it is used to store a sequence of characters
+        -it is immutable
+        -it is a non primitive data type
+    
+    creation of String :
+             1.with string literal
+             2.with string constructor
+
+        1.with string literal:
+            String s1="hello"; //it will create in constant pool area/string constant area
+            String s2="hello";
+            System.out.println(s1==s2);//true 
+
+        2.with string constructor:
+            String s2=new String("hello"); //it will create in heap area
+            String s3=new String("hello");
+            System.out.println(s2==s3);//false
+
+String methods:
+            1.length(): used to get the length of a string
+            2.charAt(index position): used to get the character at a particular index position ,
+                                    if index is out of range then it will throw 
+                                    an exception(StringIndexOutOfBoundsException)
+
+            3.substring(stating index,ending index): used to get a substring/part of a string
+            4.toCharArray(): used to convert a string to an array of characters
+            5.indexOf('a'): used to get the  first index of a character in a string,
+                           if character is not present then it will return -1
+            6.lastIndexOf('a'): used to get the last index of a character in a string,
+                           if character is not present then it will return -1
+            7.contains("abc"): used to check if a string contains a substring,if 
+                              it is present then it will return true or else it will return false
+            8.startsWith("abc"): used to check if a string starts with a substring,if 
+                              it is present then it will return true or else it will return false
+            9.endsWith("abc"): used to check if a string ends with a substring,if 
+                              it is present then it will return true or else it will return false
+            10.toUpperCase(): used to convert a string to uppercase
+            11.toLowerCase(): used to convert a string to lowercase
+            12.trim(): used to remove the leading and trailing spaces from a string
+            13.split(" "): used to split a string into an array of substrings based 
+                          on a delimiter
+            14.equals("abc"): used to check if a string is equal to another string, if 
+                             it is equal then it will return true or else it will return false
+            15.equalsIgnoreCase("abc"): used to check if a string is equal to another string
+                                        ignoring the case, if it is equal then it will return true
+                                        or else it will return false
+            16.matches("abc"): used to check if a string matches a regular expression, if
+                              it matches then it will return true or else it will return false
+            17.compareTo("abc"): used to compare two strings,
+                                if they are equal then it will return 0,
+                                if first string is less than second string then it will return -1,
+                                if first string is greater than second string then it will return 1
+                             
+
+limitations of String :
+           - Strings are immutable in java , so  if we modify (add,delete,replace)
+             a string then a new string will be created and the old string will be
+             garbage collected
+          - so, we use string builder and string buffer to modify a string
+ 
+------------------------------------------------------------------------------------
+                  String             StringBuffer               StringBuilder
+    -------------------------------------------------------------------------------
+mutability       immutable           mutable                    mutable
+thread safe      not applicable      applicable                 not applicable
+performance      slow                fast                       fast
+use case         general purpose     multi-thread              single-thread 
+
+----------------------------------------------------------------------------------
+Methods in StringBuffer and StringBuilder:
+          -both are classes present in java.lang package
+          -they are used to modify a string
+          -they are thread safe (StringBuffer) and (StringBuilder) are not thread safe
+ 
+ 1.append(): used to add a character or a string at the end of a string
+ 2.insert(): used to insert a character or a string at a particular index position
+        syntax:
+        sb.insert(index,character);
+        sb.insert(index,string);
+ 3.replace(): used to replace a character or a string at a particular index position
+        syntax:
+        sb.replace(start,end,character);
+        sb.replace(start,end,string);
+4.delete(): used to delete a character or a string at a particular index position
+        syntax:
+        sb.delete(start,end);
+5.deleteCharAt(): used to delete a character at a particular index position
+        syntax:
+        sb.deleteCharAt(index);
+6.reverse(): used to reverse a string
+        syntax:
+        sb.reverse();
+7.length(): used to get the length of a string
+        syntax:
+        sb.length();
+8.setLength(): used to set the length of a string
+        syntax:
+        sb.setLength(length);
+9.substring(): used to get a substring/part of a string
+        syntax:
+        sb.substring(start,end);
+10.toString(): used to convert a string to a string buffer
+        syntax:
+        sb.toString();
+11.charAt(): used to get the character at a particular index position
+        syntax:
+        sb.charAt(index);
+12.setCharAt(): used to set the character at a particular index position
+        syntax:
+        sb.setCharAt(index,character);
+12.indexOf(): used to get the first index of a character in a string
+        syntax:
+        sb.indexOf(character);
+13.lastIndexOf(): used to get the last index of a character in a string
+15.capacity(): used to get the capacity of a string buffer
+        syntax:
+        sb.capacity();
+16.ensureCapacity(): used to ensure the capacity of a string buffer
+        syntax:
+        sb.ensureCapacity(capacity);     
 
                                
 
