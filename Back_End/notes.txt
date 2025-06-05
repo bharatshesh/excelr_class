@@ -35,7 +35,7 @@ platform independent:
                    - ___.java(source code) ----->____.class(bytecode)
 
          2.interpreter:
-          - it is a jvm which executes bytecode
+                   - it is a jvm which executes bytecode
 
 Note : java is a platform independent but jvm dependent
 
@@ -51,7 +51,7 @@ java features:
 4.java is secure :
                -no pointers, which eliminate the need for memory management
                -java has a inbuilt security manager which prevents
-                 unauthorised access to the system
+                 unauthorized access to the system
 5.java is robust:
                  -strong management of memory
                  -it has a garbage collector which deletes
@@ -85,11 +85,13 @@ Tokens :
       - tokens are the elements of a java program 
       - types :
               1.keywords
+              ++++++++++
                         :inbuilt words and reserved words
                         :all keywords are in lowercase
                     ex: public static void if else for while switch case 
 
               2.identifiers
+              +++++++++++++
                        : names providing by programmer or developer
                        
                 Rules:(mandatory)
@@ -101,10 +103,11 @@ Tokens :
                        ex: firstNameProgram
                        : for class/interface name use pascal case
                        ex: FirstNameProgram
-                        : for method and variable name use snake case/camel case
+                       : for method and variable name use snake case/camel case
                        ex: first_name
 
               3.literals
+              +++++++++++
                         : literal is a value/data assigned to a variable
 
                 ex:    int        valueName        =        10
@@ -138,7 +141,7 @@ Data types:
                 3.object
                 4.wrapper classes
                 5.enum
-                 6.annotation
+                6.annotation
                 7.Collections
 -----------------------------------------------------------------------------
 variables:
@@ -156,11 +159,12 @@ variables:
          Note : local variable can be accessed only inside method/constructor but not outside
         - if we storing variable inside class and outside method then it is called global variable
          Note : global variable can be accessed inside and outside method
-                global variables are two types:  
-                 1.static variable
-                 2.instance/non static variable
-                  
- variable declaration:
+                global variables are two types:   
+                     1.static variable
+                     2.instance/non static variable
+
+
+variable declaration:
              -providing name to a variable
 ex: int a;
 variable initialization: 
@@ -252,15 +256,11 @@ order of data types:
                <char(16 bits)
    
 
-
-
-
-
-
             2.Non primitive type casting
 ------------------------------------------------------------------------------------
- Statements :
+Statements :
     1.Conditional Statements:
+    --------------------------
              - statements(block of code) will execute based on condition
              Types :
                  1.if statement
@@ -289,9 +289,9 @@ order of data types:
                         // if all conditions not satisfy block of code will execute
                     }
                  4.switch statement
-                    syntax:          
-                     
-                     switch(expression/value/variable/constant/){
+                    syntax:
+
+                    switch(expression/value/variable/constant/){
                          case value1:{
                             // if value matches  block of code will execute  
                          } break;
@@ -308,7 +308,7 @@ order of data types:
                          }break;
                     }
 
-    Note : 1.break statement is used to terminate the flow(optional)
+Note : 1.break statement is used to terminate the flow(optional)
        2.default statement is used to execute block of code when all 
           cases not matches(optional)
        3.cases must be unique and must be in ascending order
@@ -326,6 +326,7 @@ order of data types:
 
 
     2.Looping Statements
+    --------------------
              - statements(block of code) will execute multiple times based on condition
              Types:
               1.while loop
@@ -339,7 +340,8 @@ order of data types:
                   do{
                       // block of code will execute
                   }while(condition);
-  ---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
                             while                                     do-while
            ----------------------------------------------------------------------------
 no of iterations            0                                            1
@@ -348,72 +350,73 @@ reason                   it will check the condition,     it will execute the co
                          block of code will execute       for the first time.
            ------------------------------------------------------------------------------       
 
-              3.for loop
-
-              syntax:
-               for (initialization;condition;updation){
-                  // code will execute
-               }
-
-         Note:initialization,condition and update are optional
-
-               //initialization
-               for(;;){
-                     //condition
-                     //updation
-               }
+              3.for loop:
+             
+             syntax:
+             for(initialization;condition;updation){
+                 //code will execute 
+             }
+                
+Note: initialization, condition and updation are optional
+      
+       //initialization
+       for(;;){
+        //condition
+        //updation
+       }
 
 
 
               4.for-each loop(advanced for loop)
               syntax:
-               for(datatype variableName:arrayName){
-                     //code will ececute
+              for(datatype variableName:arrayName){
+                  //code will execute
+              }
 
-               }
----------------------------------------------------------------------------------
-                for                                       foreach
-----------------------------------------------------------------------------------
- initialization,condition,updation                       is not required 
-   is required                                               
-   performed only slow                               
-
-              5.nested loop:loop insude another loop
+          -------------------------------------------------------------
+          for                                      foreach
+    --------------------------------------------------------------
+    initialization,condition,updation
+     is required                               is not required 
+     performed only slow                       performed fast 
+    ---------------------------------------------------------------
+        
+              5.nested loop:loop inside another loop
 
   3.Other Statements:
-  ------------------
-                  1.input statements:
-                     Scanner cs=new  Scanner(System.in);
-                     byte a=sc.nextByte();
-                     short b=sc.nextShort();
-                     int c=sc.nextInt();
-                     long c=sc.nextLong();
-                     float c=sc.next.Float();
-                     double c=sc.nest.Double();
-                     char g=sc.next().charAt(0);
-                     String s=sc.next();
-                     boolean n=sc.nextBoolean();
-                  
-                  2:output statements:
-                     System.out.println();- it will print the value 
-                                            and move the cursor to the next line
-                                            -emty value is also accepted
+  -------------------
+             1.input statements:
+                   Scanner sc=new Scanner(System.in);
+                   byte a=sc.nextByte();
+                   short b=sc.nextShort();
+                   int c=sc.nextInt();
+                   long d=sc.nextLong();
+                   float e=sc.nextFloat();
+                   double f=sc.nextDouble();
+                   char g=sc.next().charAt(0);
+                   String s=sc.next();
+                   boolean h=sc.nextBoolean();
+             2.Output statements:
+                   System.out.println(); -it will print the value 
+                                         and move the cursor to next line
+                                         -empty value is also accepted
+                   System.out.print(); -it will print the value and 
+                                        not move the cursor to next line
+                                        -empty value will not accepted
+                  ex: System.out.println();//CTS
+                      System.out.print();//CTE
+            3.break statement:
+                   it is used to terminate the flow
+                   ex: break;
+            4.continue statement:
+                   it is used to skip the current iteration and continue the flow
+                   ex: continue;
 
-                     System.out.print();-  it will print the value and
-                                           not move the cursor to the next line
-                                           -emty value will not accepted
-                      ex: System.out.println();//CTS 
-                          System.out.print();//CTE 
+                    
 
-                 3.break statements:
-                      it is used to terminate the flow
-                      ex: break;
 
-                 4.continue statements:
-                      it is used to skip the current iteration and continue the flow
-                      ex: continue;                           
---------------------------------------------------------------------------------------------
 
+------------------------------------------------------------------------- 
 Arrays : 
         -arrays are used to store multiple values in a single variable
         ex: int []arr={1,2,3,4};
@@ -468,7 +471,7 @@ Arrays class Methods:
         int []arr1=Arrays.copyOf(arr,startingIndex,endingIndex-excluding);    
                     
 
- Multidimensional Arrays:
+Multidimensional Arrays:
            -array of arrays
            -declaring and initializing a multidimensional array
         
@@ -603,8 +606,9 @@ Methods in StringBuffer and StringBuilder:
 16.ensureCapacity(): used to ensure the capacity of a string buffer
         syntax:
         sb.ensureCapacity(capacity);    
----------------------------------------------------------------------------------------------------------------
-     Methods :
+
+------------------------------------------------------------------------------------------
+Methods :
       - it is a block of code that performs a specific task
       - methods should be enclosed in {}
       - methods should be declared inside a class or interface or abstract class
@@ -650,6 +654,23 @@ value/literal/expression                             datatype variableName
     ------------------------------------------------------------------------------
 
 
+Methods are two types based on return type:
+--------------------------------------------
+1.void methods/non returned methods
+      - method does not return any value to the caller
+      - return type is void
+      - return statement is not mandatory(optional)
+2.non void methods/returned methods
+      - method returns a value/data to the caller
+      - return type is not void(primitive or non primitive)
+      - return statement is mandatory
+
+Note : return is a keyword 
+       return statement is used to return a value/data to the caller
+       return statement is used to terminate a method
+       return statement must be the last statement in a method
+       more than one return statement is not allowed in a method
+
 
 Method Overloading:
 ++++++++++++++++++
@@ -691,20 +712,274 @@ Note : static members can call by using Class name
        Non static members can call by using object reference variable
 
 
+OOPS (Object Oriented Programming):
++++++++++++++++++++++++++++++++++
+      1.Encapsulation
+      2.Abstraction
+      3.Inheritance
+      4.Polymorphism
+
 Encapsulation:
 ++++++++++++++++
 - it is a process of wrapping/binding the data(variables) and methods
   into a single unit is called encapsulation
+- we can achieve data hiding and data security
 - hiding the internal state of an object from the outside world(by using access modifiers-private)
 - providing access with the help of getter and setter methods
 
 Note : getter and setter methods are used to access private variables
        getter are used to get/access/retrieve the value of private variable
        setter are used to set/assign/write the value of private variable
-       -
+
+-----------------------------------------------------------------------------
+Abstraction:
+++++++++++++
+       -The process of hiding implementation  and showing only the
+        functionality to the user is called abstraction
+       - we can achieve abstraction by using abstract classes and interfaces
+
+abstract class:
+--------------
+        - class can be declared as abstract by using abstract keyword
+        - abstract class cannot be instantiated/can't create object ,
+          because it is abstract/incomplete
+        - we can have (abstract methods , concrete methods)non static and static methods
+        - we can have non static and static variables
+        - we can have constructor for reinitialization of non static variables,
+          not for object creation
+        - static and final methods cant be abstract methods
+
+interface:
+-----------
+     - interface can be create with interface keyword
+     - to achieve multiple inheritance and 100% abstraction
+     - it will allows only abstract methods and constants
+       (public static final data member) until java 8
+     - it wont allow constructor because all the data members
+       are static and final by default
+     - from java 8 , it allows static method and default methods
+
+
+Non primitive typecasting:
++++++++++++++++++++++++++
+       -converting one non primitive data type to another non primitive data type
+       -there are two types of casting:
+            1.implicit casting : 
+                   - it is done automatically by the compiler
+                   - converting child data type to parent data type
+                   - can also called as widening typecasting(upcasting)
+            2.explicit casting : it is done manually by the programmer
+                  - it is done manually by the developer need to use cast operator ()
+                  - converting parent data type to child data type
+                  - can also called as narrowing typecasting(downcasting)
+
+
+
+
+
+
+
+Inheritance:
++++++++++++
+       -The process of inheriting properties and methods from a parent class
+       to a child class is called inheritance
+       -we can achieve inheritance by using extends and implements keyword
+            class A{
+            //parent 
+            }
+
+            class B extends A{
+            //child
+            }
+
+ extends: is a keyword used to achieve inheritance in java 
+          Child class--(extends)----->Parent class
+          Child class----(extends)--->abstract Parent class
+          abstract Child class----(extends)--->Parent class  
+
+implements : is a keyword used to achieve inheritance in java
+            class ---(implements)------>interface
+            interface----(extends)------>interface
+
+
+ parent             interface                     class/abstract class
+                        |                                 |
+                        | (achievable by implements)      |(cant achieve  )
+ child           class/abstarct class                 interface
+
+
+       Types:
+            1.single level inheritance:
+                - a class can inherit properties and methods from only
+                  one parent class to a child class
+            2.multilevel inheritance
+                - a class can inherit properties and methods from more
+                  than one parent class
+            3.hierarchical inheritance
+                 - a class can inherit properties and methods from one parent
+                   to multiple child classes
+            4.multiple inheritance 
+                - a child  inheriting properties and methods from more than one parent
+                - multiple inheritance is not allowed in java by using class
+                - it can be achieved by using interfaces
+
+Diamond Problem/Ambiguity Problem:
+++++++++++++++++++++++++++++++++++
+     when we try to perform multiple inheritance in java using class, child class
+     try to call parent class constructor and try to  override parental method
+     which causes ambiguity problem and diamond problem  
+
+            5.hybrid inheritance
+                - hybrid inheritance is a combination of multiple
+                  and hierarchical inheritance
+---------------------------------------------------------------------------
+constructor:
+++++++++++++
+           - constructor is a special method
+           - constructor is used to create the object/instance
+           - constructor is called automatically when an object is created
+           - constructor is used to assign values to non static variables
+           - constructor name should be same as class name
+           - constructor doesn't have return type
+    Types:
+          1.default constructor
+                         - no arguments constructor created by java compiler by default
+          2.user defined constructor
+                         - constructor created by user/developer/programmer
+                         1.parameterized constructor/argument constructor
+                         2.non-argument constructor/non- parameterized constructor
+
+Note : if we create an user defined constructor then default constructor 
+       will not be created by java compiler
+
+
+constructor overloading:
++++++++++++++++++++++++
+            -having multiple constructors with different parameters(formal arguments)
+             in same class is  called constructor overloading
+
+rules:
+      1. constructor name should be same as class name
+      2. different number of parameters
+      3. different type of parameters
+      4. different order of parameters
+
+constructor chaining:
+++++++++++++++++++++
+           - the process of calling one constructor from another constructor
+             is called constructor chaining
+           - used to assign values to non static variables from another constructor
+           - helps to avoid duplicate code(code duplication)
+           - can achieve with the help of this() and super() statements
+           -this() - this call statement is used to call current constructor
+           -super() - super call statement is used to call parent class constructor
+
+Note : 1.this() or super () must be the first statement in a constructor
+       2.both statements can't be used together in a constructor
     
+method overriding:
+++++++++++++++++++
+            - The process of changing the implementation of a parent class method
+              in a child class
+            - overriding is used to achieve run time polymorphism
+            - inheritance is mandatory for method overriding
+Note :
+     method signature should be same in parent class and child class
+     method return type should be same in parent class and child class
+     **final methods can't be overridden
 
-                               
+---------------------------------------------------------------------------------------
+method overloading                                        method overriding
+-----------------------------------------------------------------------------------
+multiple methods with same name                          changing the implementation
+ but different parameters                                of parent class method
+
+inheritance is not mandatory                             inheritance is mandatory
+
+compile time binding                                      run time binding
+-----------------------------------------------------------------------------------
+Object class
+++++++++++++
+         - Object class is an inbuilt class present in java.lang package from 1.0 version
+         - Object class is a parent/super/base/root class of all classes
+         - it consist 11 methods
+methods:
+-------
+1. toString()->returns a string representation of the object
+             - to print object values rather than object address/reference
+2. hashCode()->returns a hash code value for the object
+3. equals()->returns true if the specified object is equal to this object
+4. getClass()->returns the class of the object
+5. clone()->returns a copy of the object
+6. finalize()->called when the object is no longer reachable
+7. notify()->wakes up a single thread that is waiting on this object's monitor
+8. notifyAll()->wakes up all threads that are waiting on this object's monitor
+9. wait()->causes the current thread to wait until another thread invokes the notify() method or the notifyAll() method for this object
+10. wait(long timeout)->causes the current thread to wait until either another thread invokes the notify() method or the notifyAll() method for this object, or the specified amount of time has elapsed
+11. wait(long timeout, int nanos)->causes the current thread to wait until either another thread invokes the notify() method or the notifyAll() method for this object, or the specified amount of time has elapsed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Polymorphism:(many/ multiple forms)
+++++++++++++
+    -the process of having many forms is called polymorphism
+    -it is used to achieve run time polymorphism and compile
+     time polymorphism
+    Run time polymorphism:
+    ---------------------
+               - method overriding
+    Compile time polymorphism:
+    -------------------------
+               - method overloading
+               - constructor overloading
+-------------------------------------------------------------------------------------------------------------------
+
+final :
+------
+    - it is a keyword
+    - final dataMember /variable /field can't be changed/re assigned
+      need to initialize during declaration
+    - final method can't be abstract and can't be overridden
+    - final class can't be abstract and can't be inherited
+     
 
 
-               
+
+
+
+
+
+Online Course management/platform:
+++++++++++++++++++++++++++++++++
+    
+blueprint/class:  1.User class
+                  2.Student class
+                  3.Faculty class
+                  4.Course class etc
+Encapsulation: binding data and method  together in a class
+    ex: class User{
+        private int userId;
+        private String userName;
+        private String password;
+        //getter and setter methods
+    } 
+
+Abstraction and Inheritance :
+              we can make User class as abstract class,
+              Student and Faculty as child classes of User class 
+              for providing implementation
+
+Polymorphism : attending class by teacher and student
+          abstract  class User{   
+            attendingClass(); 
+          }  
+
+          class Student extends User{
+            takingClasses(){
+                system.out.println("Student attending classes");
+            }
+          }
+
+          class Faculty extends User{
+            teachingClasses(){
+                system.out.println("Faculty teaching classes");
+            }
+          }
