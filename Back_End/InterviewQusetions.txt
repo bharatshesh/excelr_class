@@ -1,0 +1,246 @@
+1.What is the difference between jdk ,jre, jvm;
+jdk-java development kit, (jre+development tools)
+jre-java runtime environment , (jvm+set of libraries)
+jvm-java virtual machine, (bytecode interpreter, used to execute bytecode)
+
+
+2.what are the principles of oops?
+    1.Encapsulation-binding/wrapping data and methods into a single unit
+                   -data hiding and data security(private dataMembers -> getter and setter methods)
+    2.Abstraction-hiding implementation and showing only functionality
+                 -abstract keyword and interface
+    3.Inheritance-acquiring/inherit properties and methods from one class to another
+                  -extends and implements keyword
+    4.Polymorphism-the ability of an object to take on many forms
+
+3.Can i override abstract methods?
+yes, then we can provide implementation -- method overriding
+
+4.can i override static method?
+No, we can't override static method--method hiding /method shadowing
+
+5.can i override final method?
+No
+
+6.can i override non static method?
+Yes
+
+7.can i override a private method?
+no, private visibility/accessibility is in same class
+
+8.can i write non static member inside interface;
+yes, but it will consider as public static final member (by default added by compiler)
+
+
+9.what is the difference between abstract class and interface
+abstract class-abstract method+ complete/concrete methods
+              -constructor for reinitialization
+              -data members - static , non static , public , private , protected , final, default
+interface-abstract methods(java 7)
+         -no constructor
+         -data members- static , public , final (will act like constants)
+         -from java 8 static method and default methods are allowed
+
+10.types of Inheritance
+     1.single level inheritance
+     2.multilevel inheritance
+     3.hierarchical inheritance
+     4.multiple inheritance(can't achieve by using class -ambiguity problem/diamond problem)
+                           (can achieve by using interface)
+     5.hybrid inheritance
+
+11.what is the difference between super and this keyword?
+    super-keyword refers to parent class object
+        super() used to call parent class constructor from child class
+        inheritance is mandatory
+    this-keyword refers to current class object
+        this() used to call another constructor of same class
+
+12.What is  constructor?
+  -constructor is a special method , used to create the object/instance 
+   and assign values to non static variables
+  -Types: 
+        1.default constructor
+        2.user defined constructor 
+                1.parameterized constructor/argument constructor
+                2.non-argument constructor/non- parameterized constructor
+
+13.What is the difference between method and constructor?
+method:  method name can be anything
+      : return type can be anything(void , primitive , non primitive)
+constructor: constructor name should be same as class name
+      : constructor doesn't have return type
+
+14.can i declare constructor with public access modifier?yes
+15.can i declare constructor with private access modifier?
+ yes , but it will avoid object creation from outside the class
+ it will act like singleton class
+16.can i declare constructor with protected access modifier? yes
+
+
+17.what is the difference between int and Integer?
+int- primitive data type
+       default value :0
+Integer-non primitive data type/ wrapper class of int
+       default value :null
+
+
+18.how many primitive data types are there?
+      8->byte , short , int , long , float , double , char , boolean
+
+19.how many non primitive data types are there?
+      String , array, class , interface , enum, annotation , Collections
+    
+20.How to convert primitive data types to object data types?
+  Boxing /AutoBoxing  using Wrapper class
+21.How to convert object data types to primitive data types?
+  UnBoxing/AutoUnBoxing
+22.What is Parsing
+    converting string to primitive data type
+
+23.What is typeCasting:
+    converting one data type to another data type
+    1.primitive type casting 
+                         1.Widening/implicit  -converts small to large 
+                         2.Narrowing/explicit -converts large to small
+    2.non primitive type casting
+                        1.UpCasting/widening/implicit - converts child to parent
+                        2.DownCasting/narrowing/explicit - converts parent to child
+
+24.What is return ?
+     -return keyword is used to return the value from the method
+     -return keyword is used to terminate the method
+     -return keyword must be the last statement in a method
+     -more than one return statement is not allowed in a method
+
+25.what is break and continue?
+    break-keyword is used to terminate the program
+    continue-keyword is used to skip the current iteration and move to next iteration
+
+26.What is Identifier?
+    -it is a name given to a variable , method , class , interface
+26.What is a literal?
+    -the values stored in a variable is called literal
+
+27.What is a variable?
+    -it is a container to store data
+    types:
+    Based on Scope:
+              1.local variable
+              2.Static variable
+              3.instance variable/Non static variable
+    Based on Datatype:
+              1.primitive variable
+              2.non primitive variable
+
+28.Can i use local variable without assigning ?
+No
+        public void m1(){
+            int a;
+            System.out.println(a);//CTE
+        }
+29.Can i use global variable without assigning ?
+yes
+
+        public class Task1{
+            int a;//global variable
+            public void m1(){
+                System.out.println(a);//0
+            }
+        }
+
+
+30. Can i call static members inside a non static method?
+Yes
+
+ -can call static members with the help of className
+
+31. Can i call non static members inside a static method?
+No (directly)
+
+-i need to call non static member inside a static method
+   then we can do with object creation
+
+
+32.What is operator and how many operators are there?
+operator: symbol which is used to perform some operation on operands
+operators:
+    1.arithmetic operators
+    2.relational operators
+    3.logical operators
+    4.assignment operators
+    5.bitwise operators
+    6.conditional operators
+    7.increment/decrement operators
+    8.access operator (.)
+
+33.What is conditional statements?and types?
+conditional statements: it is used to execute the block of code based on condition
+types:
+        1.if statement
+        2.if-else statement
+        3.if-else-if ladder
+        4.switch statement
+        5.nested if statement
+
+34.What is loop statement and its types?
+loop statement: it is used to execute the block of code multiple times based on condition
+types:
+        1.while loop
+        2.do-while loop
+        3.for loop
+        4.for-each loop
+        5.nested loop
+
+35.what is the difference between while and do-while loop?
+while loop: mim no.of iterations =0
+             first check the condition then execute the block of code
+do-while loop: min no.of iterations =1
+            first execute the block of code then check the condition
+
+36. what is the difference between for and for-each loop?
+for:initialization,condition,updation are required
+    iterates in an range
+    
+foreach:initialization,condition,updation are not required
+       :iterates in a collection/array
+
+37.What is an array?
+array: it is a collection of similar data types
+     : we can manipulate and access based on index , and starting index is 0
+     : it is a fixed size, array is an immutable object
+     : it is a non primitive data type
+
+limitations of array:
+    1.it is a fixed size
+    2.it is immutable(can't be modified)
+    3.it is a collection of similar data types
+
+38.What is String ?
+String : it is a collection of characters
+       : annotated with ""
+       : it is a non primitive data type
+       : it is a immutable object
+
+39.what is the difference between StringBuilder and StringBuffer?
+StringBuilder: it is a mutable object
+             : it is not thread safe
+             : it is fast
+             : it is not synchronized
+             : it won't supports multithreading(single thread)
+StringBuffer: it is a mutable object
+            : it is  thread safe
+            : it is slower than  StringBuilder but faster than String
+            : it is synchronized
+            : it supported multithreading
+
+            
+40.what is the difference between method overloading and method overriding?
+method overloading:
+                  : it will occur at compile time(compile time binding/ static binding)
+                  : Inheritance is not  mandatory 
+                  : having multiple methods with same name and different parameters
+method overriding:
+                 : it will occur at run time(runtime binding/ dynamic binding)
+                 : Inheritance is mandatory
+                 : changing the implementation of parent class method in child class 

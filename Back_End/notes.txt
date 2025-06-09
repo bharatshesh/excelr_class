@@ -940,13 +940,6 @@ final :
     - final method can't be abstract and can't be overridden
     - final class can't be abstract and can't be inherited
      
-
-
-
-
-
-
-
 Online Course management/platform:
 ++++++++++++++++++++++++++++++++
     
@@ -983,3 +976,289 @@ Polymorphism : attending class by teacher and student
                 system.out.println("Faculty teaching classes");
             }
           }
+
+--------------------------------------------------------------------------------------------------------------
+modifiers:(spscifiers c language)
++++++++++++++
+          - modifier ara a keywords.
+          - used to modify the visibility of class members
+          - used to modify ths accessibility of class members
+          - used to provide addtional information about class members
+
+   Types:
+           1. access modifiers
+           2. non access modifiers
+
+  1.Access modifier:
+  -----------------
+            -it is used to modify the accessibility and visibility of class members
+            1.public --- public keyword
+            2.private --- private keyword
+            3.protected --- protected keyword
+            4.default   --- no keyword 
+------------------------------------------------------------------------------------------------------
+                
+                      public           protected              default             private
+-----------------------------------------------------------------------------------------------------
+int same class          yes            yes                   yes                    yes 
+
+int same package
+but in different class  yes            yes                   yes                     no
+
+in different package    
+with sub class          yes            yes                    no                     no 
+
+in different
+package                 yes            no                     no                     no         
+-----------------------------------------------------------------------------------------------------
+
+2.Non acccess modifiers:
+-----------------------
+                     - it is used to provide addtional information about class members
+
+                  1.static:
+                          - it is a keyword
+                          - it belongs to class not object
+                          - it will load member in memory only onc(static area of memory)
+                     
+                     In same class :
+                           1.can call directly by using  refName/method() in static method and non static method
+                           2.can call with classname.refName / className.method() in static and non static method      
+                     In different class:
+                              - can call with only with className.refName / className.method()
+
+                    non static:
+                    In same class:
+                           1.can call directly bu using refName/methhod() in non static methhod
+                           2.can call with objRef.refName / objRef.methhod() in static methhod
+                    In different class:
+                           - can call with className.refName / className.method()
+
+                  2.final:
+                         - it is a keyword
+                         - final dataMember /variable /field can't be changed/re assigned
+                         - need to initialize during declaration
+                         - final method can't be abstract and can't be overridden
+                         - final class can't be abstract and can't be inherited   
+                  3.abstarct:
+                         - it is a keyword
+                         - use for methods and class to make it as abstarct
+                         - abstarct class can't be instantiated and can't be final
+                         - abstarct method need be abstarct in child class and can't be final
+                  4.synchronized
+                  5.native 
+                  6.strictfp
+                  7.volatile
+                  8.transient etc  
+---------------------------------------------------------------------------------------------------------------
+Wrapper class:
++++++++++++++
+    -it is a class(present in java.lang package)
+    -it is used to convert primitive data types to object data types
+    -it is used to convert object data types to primitive data types
+    -and we can achieve 100% oops
+    -A class which is wrapping a primitive data type is called wrapper class 
+  
+  primitive data types                      Object class(wrapper class/non primitive data types)
+  ------------------------------------------------------------------
+       byte                                     Byte
+       short                                    Short
+       int                                      Integer
+       long                                     Long
+       float                                    Float
+       double                                   Double
+       char                                     Character
+       boolean                                  Boolean
+      
+
+converting primitive data types to object data types:
+---------------------------------------------------
+1. AutoBoxing: automatic conversion of primitive data types to object data types
+        WrapperClass refName=value;
+2. Boxing: manual conversion of primitive data types to object data types
+       WrapperClass refName=WrapperClass.valueOf(value);
+       ex:
+       Byte b=Byte.valueOf(10);
+       Short s=Short.valueOf(10);
+       Integer i=Integer.valueOf(10);
+       Long l=Long.valueOf(10);
+       Float f=Float.valueOf(10);
+       Double d=Double.valueOf(10);
+       Character c=Character.valueOf('A');
+       Boolean b1=Boolean.valueOf(true);
+
+
+converting object data types to primitive data types:
+---------------------------------------------------
+1.AutoUnBoxing: automatic conversion of object data types to primitive data types
+        primitiveDataType refName=value;
+2.UnBoxing: manual conversion of object data types to primitive data types
+       primitiveDataType refName=WrapperClassRefName.intValue();
+
+       ex:
+       byte b=b1.byteValue();
+       short s=s1.shortValue();
+       int i=i1.intValue();
+       long l=l1.longValue();
+       float f=f1.floatValue();
+       double d=d1.doubleValue();
+       char c=c1.charValue();
+       boolean b1=b1.booleanValue();
+
+Parsing
+--------
+    - it is used to convert string to primitive data types
+ex:
+    byte b=Byte.parseByte("10");
+    short s=Short.parseShort("10");
+    int i=Integer.parseInt("10");
+    long l=Long.parseLong("10");
+    float f=Float.parseFloat("10.5");
+    double d=Double.parseDouble("10.5");
+    char c=Character.parseChar("A");
+    boolean b1=Boolean.parseBoolean("true");
+---------------------------------------------------------------------------------------------------------------
+initializer:
+-----------
+   -block of code
+   -it doesn't have name , return type and access modifier
+   Types:
+   1.static initializer
+   2.non static initializer
+
+static initializer:
+-------------------
+    -it is used to initialize static data members
+    -it is executed only once when class is loaded in memory(static area of memory)
+    -it is called before main method
+
+    syntax:
+    static{
+      //block of code
+    }
+
+non static initializer:
+----------------------
+    -it is used to initialize non static data members
+    -it is executed when object is created (heap area)
+    -it is called before constructor
+
+    syntax:
+    {
+      //block of code
+    }
+
+----------------------------------------------------------------------
+Exception:
+---------
+   - it is an event that occurs during the execution of a program
+   - it disrupts the normal flow of the program
+   - It is a class present in java.lang package
+   Types:
+    1.checked exception
+    2.unchecked exception
+1.Checked Exception:(compiler aware exception)
+        -compiler checks the exception at compile time
+        -it is checked and handled  at compile time
+      ex: IOException, SQLException, 
+          FileNotFoundException,ClassNotFoundException etc
+
+2.Unchecked Exception:(compiler unaware exception)
+       -compiler checks the exception at run time
+       -it is not checked and handled at compile time
+    ex: ArithmeticException, ArrayIndexOutOfBoundException,
+        NullPointerException, NumberFormatException etc
+
+
+How to handle exception?
+------------------------
+1.try , catch and finally block
+2.throws keyword
+
+1.try , catch and finally block:
+--------------------------------
+   -try, catch, finally are keywords
+   -In try block will have problematic code/statements
+   -In catch block will have exception handling code/statements
+   -In finally block will have clean up code/statements
+
+Note : 1.without catch block we can't handle exception
+       1.without catch or finally try block will not write/complete
+
+scenarios:
+ 1.   try{
+
+    } 
+    catch(Exception e){
+      
+    }
+    
+2. try{
+
+    }
+    catch(Exception e){
+      
+    }
+    finally{
+      
+    }
+
+3. try{
+  
+  }
+  catch(IndexOutOfBoundsException e){
+    
+  }
+  catch(ArithmeticException e){
+    
+  }
+  catch(Exception e){
+    
+  }
+
+
+4. try{
+       try{
+
+       }
+       catch(Exception e){
+         
+       }
+  }
+  catch(Exception e){
+    
+  }
+ 
+ 2.throws :
+ ----------
+     - throws is a keyword
+     - it is used to declare exception in method signature
+     - it helps to throw exception from method to caller
+     - it makes the code more readable and maintainable
+
+ex: void m1()throws Exception{
+
+   }
+
+
+
+Exception Propagation:
+----------------------
+   -the process of passing exception from one method to another 
+   method is called exception propagation
+   -to achieve exception propagation we can use throws keyword
+   -to avoid exception propagation we can use try , catch and finally block
+
+Custom Exception:
+----------------
+   -it is a user defined exception
+   -the class must be child of Exception class
+    (any class of throwable hierarchy)
+   -if it is required , we can override methods of Exception class 
+
+throw                                  throws
+-------------------------------------------------------------------
+is used to throw exception     is used to declare exception in method signature
+
+inside a block                    in method signature
+---------------------------------------------------------------------------    
