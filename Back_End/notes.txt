@@ -1261,4 +1261,122 @@ throw                                  throws
 is used to throw exception     is used to declare exception in method signature
 
 inside a block                    in method signature
----------------------------------------------------------------------------    
+---------------------------------------------------------------------------
+
+thread:(task)
+-------
+      -it is a light weight process
+      -it is a smallest unit of execution
+      -it is a collection of instructions 
+      -it is a collection of stack frame 
+
+                         MultiTasking 
+                               |
+                               |
+        --------------------------------------------------------
+        |                                                      |
+    process based                                         thread based             
+    multitasking                                         multitasking
+
+ process based multitasking:
+ --------------------------
+                 -execting several tasks at the same time simultaneously 
+                 where each task is independent of other task 
+
+        ex: In hotel  ---multiple chefs--
+                      chef---1task
+                      chef---1task
+
+ thread based multitasking:
+ -------------------------
+                -execting sevral/multiple tasks at the same time simultaneously
+                where each task is independent on other task 
+
+         ex: In hotel  ---multiple chefs --
+               1chef---cutting vegetables 
+                    ---cooking 
+                    ---sevving 
+Note : multiple threads belongs to a single process, but a process is 
+      not just a collection of threads
+
+
+  How to create a threads ?
+  ------------------------  
+                   1.Threads class
+                   2.Runnble inrerface 
+
+   1.Thread class:
+   +++++++++++++++
+            by extending Thread class we can ceate a thread (user difined thread)
+            syntax:
+            class MyThread  extends Thread{
+
+            } 
+   2.Runnble interface:
+   +++++++++++++++++++
+            by implementing Runnable interface we can create a thread(user difined thread)
+            syntax:
+            class MyThread implements Runnable{
+              public void run(){
+                //code 
+              }
+            }          
+
+ Thread Life Cycle:
+ ------------------
+                1.New state -> thread is created(user defined thread) - heap area
+                   syntax: Thread t=new Thread();
+                2.Runnable state --> thread is ready to execute , but waiting for 
+                                     CPU to execute
+                    syntax: t.start();                  
+                3.Running state ---> thread is execting/Running
+                    syntax: t.run();
+                    Note: run() method is called by start() method automatically
+                     
+                4.waited/bolcked state --> thread is in waiting phase/paused / bolcked state 
+                                           for another thread to be complete
+                    syntax: t.wait();                       
+                5.Iimed waiting state --> thread is waiting for specifiedtime to complet
+                    syntax: t.sleep();
+                6.Terminated state --> thread is completed or terminated 
+                    syntax: t.stop();
+
+NOte : 1. by using notify() or notifyAll() method we can notify a waiting thread
+          we can move thread from waiting state to running state.
+
+       2. start() will move create a new thread and it is responsible for the execution of run() method
+----------------------------------------------------------------------------------------------------
+
+synchronized:
++++++++++++++
+          - it is a keyword , and non access modifier
+          - it is uesd to make a block synchronized
+          - synchronized blocks will ensure that only one thread can acces at a time
+
+---------------------------------------------------------------------------------------------------------
+                     with synchronized                                  with synchronized
+---------------------------------------------------------------------------------------------------------
+ safe                 safe - proper thread handling                       unsafe - no proper thread handling
+
+ performance           slower                                             faster 
+
+ output                always accurate                                    may not be accurate               
+ --------------------------------------------------------------------------------------------------------
+ 
+ Thread Scheduler:
+ -----------------
+        - if multiple threads are waiting to execute, which thread will execute
+         1st is decided by Thread Scheduler, which is a part of jvm
+        - which algorithm or behavior is used by jvn to decide , which can't excepted 
+
+        - we can provide priority to threads by using setPriority() method 
+
+  ex:   banana apple arange 
+
+ Q. what will happen when we have overloading methhods for run() ?
+ A. start() method will only check for no args run() method, so it will call
+        no args run() method.
+
+ Q. What will happen if we are not overriding run() method ? 
+ A. start() method will invoke parental run() method , so it wont print anything.       
+        
