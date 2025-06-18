@@ -1735,6 +1735,23 @@ Set interface:
    -Set is a collection of unordered elements
    -No extra methods beyond what is inherited from Collection.
 
+-----------------------------------------------------------------------------------------
+                    HashSet               LinkedHashSet              TreeSet
+----------------------------------------------------------------------------------------
+order                 no                  insertion order           sorting order
+
+null values           yes                       yes                     no 
+
+duplicates            no                        no                      no 
+
+Indexed acccess       no                        no                      no 
+
+performance          faster                   slower                   slower
+
+thread-safe           no                        no                       no 
+-----------------------------------------------------------------------------------------
+
+
 Feature                   	List                         	Set
 ------------------------------------------------------------------------------------
 Order	          Maintains insertion order	    May or may not (depends on implementation)
@@ -1768,6 +1785,22 @@ element():used to get the first element of the queue
 remove():used to remove an element from the queue
          :returns E , element from the queue
          :if queue is empty returns NoSuchElementException
+
+----------------------------------------------------------------------------------------
+                        PriorityQueue            LinkedList           ArrayDeque
+-----------------------------------------------------------------------------------------
+parent interface        Queue                    List,Deque,Queue     Deque,Queue
+
+randam acccess           no                       yes (index)            no 
+
+ordering              priority order              insertion order     insertion order
+                      (natural order)               (fifo)
+
+null values               no                          yes                no
+
+use case            priority matters            both list and queue   both stack and       
+
+----------------------------------------------------------------------------------------
 
 
 Feature                 	List              	Set                	Queue
@@ -1931,6 +1964,123 @@ putIfAbsent(K key, V value):	Puts value if key not already mapped
 replace(K key, V value)	:Replaces value for given key
 replace(K key, V oldValue, V newValue)	:Replaces value if key is mapped to oldValue
 getOrDefault(Object key, V defaultValue):	Returns value or default if key not found
+
+----------------------------------------------------------------------------------------------
+
+                  HashMap             TreeMap          HashTable             LinkedHashMap
+----------------------------------------------------------------------------------------------
+ordering         no order             key based         no order             insertion order
+
+null kay          allow               not allow         not allow            allow 
+
+null kay          allow                allow              not allow            allow 
+
+thread safe         no                  no                yes                   no 
+
+performance        fast                slow               slow                slightly slower
+
+internal ds      hashtable          red-black tree       hashtable          doubly linke list 
+-----------------------------------------------------------------------------------------------
+
+Generic and Non Generic collection:
+----------------------------------
+
+Generic collection:
++++++++++++++++++++
+          -it specifies the types of data/objects to be stored in the collection
+          -it is enclosed in < > brackets
+          -compile time checking
+          -no need of type casting 
+          -code is more readable and understandable
+
+
+
+Non Generic collection:
+++++++++++++++++++++++
+          -it doesn't specify the type of data/objects to be stored th the collection
+          -it is not enclosed in < > brackets
+          -run time checking
+          -need of type casting 
+          -Maintains less code readability amd maintainability
+
+-------------------------------------------------------------------------------------------------------------
+java 8 features:
+----------------
+         after 1.5 version , java 8 version is the next major version
+   1.lambda expression
+   2.functional expression
+   3.default methhod
+   4.stream api 
+   5.optional class
+   6.data and time api 
+   7.Double colon operator(::) etc ..
+
+lambda expression:
+===================
+       - lambda expression is a small anonymous (without name) function
+       - it doesn't hava method name and return type , modifiers etc
+       - lambda expression is also called as anonymous function or closures
+       - 
+   ex1: public void m1(){
+      System.out.println("hello");
+     }  
+
+   lambda expression: ()->{System.out.println("hello");}
+                        ()-> System.out.println("hello");
+
+   Note: curly brackets are required when we are having more than one statement in lambda expression  
+
+   ex2: public void m2(int a, int b){
+    System.out.println(a+b);
+   }
+
+   lambda expression: (int a,int b)->System.out.println(a+b);
+                    : (int a,int b)->{System.out.println(a+b);}
+                    : (a,b)->System.out.println(a+b);
+
+   Note: if the ty of parameters are same then we can skip the type of parameters
+         if the type pf parameters can be decided by compiler then we can skip the type of parameters
+
+   ex: public return type m3(int a,int b){
+    return a+b;
+  }
+
+  lambda expression: (int a,int b)-> return a+b;
+                   : (a,b)->return a+b;
+                   : (a,b)->a+b;   
+
+Functional interface:
+---------------------
+          -it is an interface which contains only one abstarct method
+          -it also called as single abstarct method interface(SAMI)
+          -then the single abstarct method is called as functional interface method or
+           single abstarct method (SAM)
+          -in java 8 they introduced @FunctionalInterface annotation 
+
+   Note: Functional interface allows only one abstarct method but 
+         multiple default and static method are allowed
+       
+   ex:
+     Runnable interface=> void run();
+     Comparator interface=> int compare(T t1,T t2);
+     ActionListener interface=> void actionPerformed(ActionEvent e);
+     Predicate interface=> boolean test(T t);
+     Callable interface=> T call();
+      
+
+
+Functional interface vs lambda expression:
+------------------------------------------
+    - once we create a functional interface then we can create a lambda expression
+     for that abstarct method 
+    - we can functional interface to refer a lambda expression
+
+   Note: the local variable mentioned in lambda expression are implicitly final, so that 
+        variable cannot be modified.
+
+
+
+
 
 
 
