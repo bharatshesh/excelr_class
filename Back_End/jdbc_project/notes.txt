@@ -29,5 +29,13 @@ Steps:
 		                              execute stored procedures and functions
 		
 		  
-		4.Execution of Statement
-		5.close 
+		4.Execution of Statement : executing the statement objects
+		    boolean execute(); -- it executes both DML (data manipulation language-inesrt , update , delete)-return false
+		                          and DQL (data query language- fetch)-returns true
+		                          
+		    int executeUpdate();- it execute DML --return number based on no.of rows manipulated
+		    
+		    ResultSet execteQueary() -it execute DQL--return data;
+		    
+		                          
+		5.close: closing resources - to avoid connection pool
