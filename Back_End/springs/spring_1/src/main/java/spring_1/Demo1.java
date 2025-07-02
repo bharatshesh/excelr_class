@@ -1,7 +1,4 @@
 package spring_1;
-
-
-
 import java.sql.SQLException;
 
 import org.springframework.beans.factory.BeanFactory;
