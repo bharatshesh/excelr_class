@@ -14,15 +14,25 @@ import jakarta.persistence.Id;
 public class Employee {
 	@Id // for primary key -- won't accepts null and duplicates
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // autogenerarting of id's
-	private int id;
+	
 //	@Value("Tejas")
 	
-    private String name;
+	private int id;
+	private String name;
 	private String email;
 	@Column(unique = true )// it will make a column as unique
 	private long phone;
 	private String pwd;
 	
+	 public int getId() {
+			return id;
+		}
+
+
+		public void setId(int id) {
+			this.id = id;
+		}
+	 
 	public String getName() {
 		return name;
 	}
