@@ -19,6 +19,7 @@ public class Employee {
 	
 	private int id;
 	private String name;
+	@Column(unique = true) 
 	private String email;
 	@Column(unique = true )// it will make a column as unique
 	private long phone;

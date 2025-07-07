@@ -201,7 +201,28 @@ annotations on variables to inject:(Dependency Injection)
 
 @Autowired--->used to inject references to objects
 
+annotations used to handle exceptions:
+========================================
 
+@RestControllerAdvice--->is a class used to handle exceptions
+
+@ExceptionHandler--->used to handle exceptions which are thrown by methods in controller class
+                 
+
+
+creating a generic class in dto to transfer data:
+-------------------------------------------------
+
+public class Response<T>(val status: int, val data: T, val message: String)
+                
+
+annotations used to handle cors error:
+====================================
+
+@CrossOrigin--->used to handle cors error
+                should be used in controller class
+                it can handle multiple origins
+                syntax: @CrossOrigin(origins = "*" ,methods = "*" ,allowedHeaders = "*")
 
 
 
