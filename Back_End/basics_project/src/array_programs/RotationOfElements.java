@@ -1,5 +1,11 @@
 package array_programs;
 
+//70.Rotation of elements of an array by k times
+//{10,20,30,40,50} and k=2
+// left array  rotation :{20,30,40,50,10}
+//                      :{30,40,50,10,20}
+// right array rotation :{40,50,10,20,30}
+//                      :{50,10,20,30,40} 
 import java.util.Arrays;
 
 public class RotationOfElements {
